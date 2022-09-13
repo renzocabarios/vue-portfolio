@@ -22,7 +22,7 @@ import NavBar from './NavBar.vue';
 
             </div>
             <div class="intro-img flex justify-center flex-col">
-                <img src="./assets/img.png" alt="" srcset="">
+                <img src="../assets/img.png" alt="" srcset="">
             </div>
         </div>
     </div>
