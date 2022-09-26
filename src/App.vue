@@ -1,5 +1,6 @@
 <script lang="ts">
 import NavBar from './utility/NavBar.vue';
+import Hero from './utility/Hero.vue';
 
 export default {
     setup() {
@@ -18,27 +19,15 @@ export default {
 
         return { qr_code, preview, order_summary }
     },
-    components: { NavBar }
+    components: { NavBar, Hero }
 
 };
 </script>
 
 <template>
     <NavBar />
-    <div class="min-h-screen px-10 grid grid-cols-2 text-black">
-        <div class="flex flex-col justify-evenly gap-1 px-24">
-            <div class="text-slate-400 font-black">
-                <p class="text-9xl">Renzo</p>
-                <p class="text-9xl">Cabarios</p>
-            </div>
-            <p class="text-6xl text-slate-400">
-                I am a developer
-                who might not be the best, but I am capable enough to finish a job.
-            </p>
-            <button class="bg-slate-400 font-black text-white p-6 rounded shadow text-3xl">Let's Connect</button>
-        </div>
-        <div class="image"></div>
-    </div>
+    <Hero />
+
     <div class="px-10 flex flex-col gap-10 ">
         <p class="text-7xl text-slate-400 font-black text-center">My Projects</p>
         <div class="flex flex-wrap justify-center w-full gap-10">
@@ -77,11 +66,5 @@ export default {
 
 span {
     font-size: 3rem;
-}
-
-@media only screen and (min-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
 }
 </style>
