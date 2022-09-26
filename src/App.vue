@@ -2,10 +2,10 @@
 import NavBar from './utility/NavBar.vue';
 import Hero from './utility/Hero.vue';
 import MyProject from './utility/MyProject.vue';
+import BaseFooter from './utility/BaseFooter.vue';
 
 export default {
     setup() {
-
         function qr_code() {
             window.location.href = "https://github.com/renzocabarios/vanilla-web/tree/master/qr-code-component-main";
         }
@@ -20,7 +20,7 @@ export default {
 
         return { qr_code, preview, order_summary }
     },
-    components: { NavBar, Hero, MyProject }
+    components: { NavBar, Hero, MyProject, BaseFooter }
 
 };
 </script>
@@ -29,7 +29,7 @@ export default {
     <NavBar />
     <Hero />
     <MyProject />
-    <div class="bg-slate-400 w-full p-12 mt-12"></div>
+    <BaseFooter />
 </template>
 
 
