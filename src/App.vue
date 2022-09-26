@@ -1,50 +1,37 @@
-<script setup lang="ts">
+<script lang="ts">
+import NavBar from './utility/NavBar.vue';
 
-
-
-</script>
-
-<script  lang="ts">
 export default {
-    data() {
-        return {
-            name: 'Vue.js'
-        }
-    },
-    methods: {
-        qr_code() {
+    setup() {
+
+        function qr_code() {
             window.location.href = "https://github.com/renzocabarios/vanilla-web/tree/master/qr-code-component-main";
-        },
-        preview() {
+        }
+
+        function preview() {
             window.location.href = "https://github.com/renzocabarios/vanilla-web/tree/master/preview-card-component";
-        },
-        order_summary() {
+        }
+
+        function order_summary() {
             window.location.href = "https://github.com/renzocabarios/vanilla-web/tree/master/order-summary-component-main";
-        },
-    }
+        }
+
+        return { qr_code, preview, order_summary }
+    },
+    components: { NavBar }
+
 };
 </script>
 
 <template>
-    <nav class=" bg-slate-400 w-full flex justify-between items-center h-20 px-10">
-        <p class="text-5xl font-black text-white">Portfolio</p>
-        <div class="text-white flex justify-center gap-5">
-            <span class="material-symbols-outlined">
-                home
-            </span>
-
-            <span class="material-symbols-outlined">
-                apps
-            </span>
-        </div>
-    </nav>
+    <NavBar />
     <div class="min-h-screen px-10 grid grid-cols-2 text-black">
         <div class="flex flex-col justify-evenly gap-1 px-24">
             <div class="text-slate-400 font-black">
-                <p class="text-7xl">Renzo</p>
-                <p class="text-7xl">Cabarios</p>
+                <p class="text-9xl">Renzo</p>
+                <p class="text-9xl">Cabarios</p>
             </div>
-            <p class="text-4xl text-slate-400">
+            <p class="text-6xl text-slate-400">
                 I am a developer
                 who might not be the best, but I am capable enough to finish a job.
             </p>
@@ -90,5 +77,11 @@ export default {
 
 span {
     font-size: 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
 }
 </style>
